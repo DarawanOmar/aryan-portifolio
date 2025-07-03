@@ -50,9 +50,6 @@ export function ThemeSelector() {
             getCurrentTheme().value
           )} group-hover:scale-110 transition-transform duration-300`}
         />
-        <span className="text-sm font-medium text-gray-700 hidden sm:block">
-          {getCurrentTheme().name}
-        </span>
       </button>
     </div>
   );
