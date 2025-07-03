@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Send,
-  Mail,
   AtSign,
   MessageCircle,
   Instagram,
@@ -10,6 +9,7 @@ import {
 } from "lucide-react";
 import { PortfolioData } from "../_type";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProfileSectionProps {
   data: PortfolioData;
@@ -32,14 +32,6 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
         return <Send size={20} />;
       default:
         return null;
-    }
-  };
-
-  const handleContactClick = (method: (typeof data.contactMethods)[0]) => {
-    if (method.type === "telegram") {
-      window.open(`https://t.me/${method.value.replace("@", "")}`, "_blank");
-    } else if (method.type === "whatsapp") {
-      window.location.href = `${method.value}`;
     }
   };
 
@@ -86,14 +78,20 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
       {/* Contact Buttons */}
       <div className="flex flex-row gap-4 justify-center max-w-md mx-auto">
         {data.contactMethods.map((method) => (
-          <button
+          <Link
             key={method.type}
-            onClick={() => handleContactClick(method)}
+            href={
+              method.type === "telegram"
+                ? `https://t.me/${method.value.replace("@", "")}`
+                : method.type === "whatsapp"
+                ? method.value
+                : "#"
+            }
             className="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-600 text-white rounded-full font-medium hover:from-gray-900 hover:to-gray-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl bg-black"
           >
             {getIcon(method.icon)}
             <span>{method.label}</span>
-          </button>
+          </Link>
         ))}
       </div>
     </div>
