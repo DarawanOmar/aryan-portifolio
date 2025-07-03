@@ -1,33 +1,39 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-providers";
+import { cn } from "@/lib/utils";
+import { cookies } from "next/headers";
+import { ActiveThemeProvider } from "@/components/theme/active-theme";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const source_code = Dancing_Script({
+  variable: "--font-source-code",
   subsets: ["latin"],
+  weight: [],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const activeThemeValue = cookieStore.get("active_theme")?.value;
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preload" as="image" href="/ara.jpg" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg[#e0e5ec]`}
+        className={cn(
+          `${source_code.variable} font-source-code`,
+          activeThemeValue ? `theme-${activeThemeValue}` : ""
+        )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <ActiveThemeProvider initialTheme={activeThemeValue}>
+            {children}
+          </ActiveThemeProvider>
         </ThemeProvider>
       </body>
     </html>

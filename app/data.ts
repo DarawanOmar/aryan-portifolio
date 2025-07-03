@@ -20,6 +20,11 @@ export const portfolioData: PortfolioData = {
       url: "https://facebook.com/aryanbrhan125",
       icon: "facebook",
     },
+    {
+      name: "Behance",
+      url: "https://behance.net/aryanbrhan",
+      icon: "behance",
+    },
   ],
   contactMethods: [
     {

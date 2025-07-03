@@ -1,16 +1,11 @@
 import React from "react";
-import {
-  Send,
-  AtSign,
-  MessageCircle,
-  Instagram,
-  Linkedin,
-  LucideFacebook,
-  Briefcase,
-} from "lucide-react";
-import { PortfolioData } from "../_type";
+import { Send, AtSign, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaBehance, FaFacebookF, FaLinkedin } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { MdWork } from "react-icons/md";
+import { PortfolioData } from "@/app/_type";
 
 interface ProfileSectionProps {
   data: PortfolioData;
@@ -20,17 +15,19 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "linkedin":
-        return <Linkedin size={24} />;
+        return <FaLinkedin size={24} />;
       case "instagram":
-        return <Instagram size={24} />;
+        return <RiInstagramFill size={24} />;
       case "facebook":
-        return <LucideFacebook size={24} />;
+        return <FaFacebookF size={24} />;
       case "at-sign":
         return <AtSign size={24} />;
       case "message-circle":
         return <MessageCircle size={24} />;
       case "send":
         return <Send size={20} />;
+      case "behance":
+        return <FaBehance size={24} />;
       default:
         return null;
     }
@@ -58,9 +55,11 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
       </div>
 
       {/* Name and Title */}
-      <div className="space-y-2">
-        <h1 className="text-4xl font-bold text-gray-800">{data.name}</h1>
-        <p className="text-xl text-gray-600 font-medium">{data.jobTitle}</p>
+      <div className="space-y-2 ">
+        <h1 className="text-4xl font-bold text-primary">{data.name}</h1>
+        <p className="text-xl text-muted-foreground font-medium">
+          {data.jobTitle}
+        </p>
       </div>
 
       {/* Social Links */}
@@ -72,7 +71,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={link.name}
-            className="p-3 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-700 hover:bg-gray-50 hover:scale-110 transition-all duration-300 hover:shadow-lg shadow-md"
+            className="p-3 rounded-full bg-white/80 dark:bg-black text-primary backdrop-blur-sm border  border-gray-200 dark:border-muted-foreground/40  hover:bg-gray-50 hover:scale-110 transition-all duration-300 hover:shadow-lg shadow-md"
           >
             {getIcon(link.icon)}
           </a>
@@ -94,7 +93,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
             aria-label={
               method.type.charAt(0).toUpperCase() + method.type.slice(1)
             }
-            className="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-600 text-white rounded-full font-medium hover:from-gray-900 hover:to-gray-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-muted-foreground/20 to-muted-foreground/5 text-primary rounded-full font-medium  hover:scale-105 transition-all duration-300 shadow-lg  hover:shadow-xl"
           >
             {getIcon(method.icon)}
             <span>{method.label}</span>
@@ -109,9 +108,9 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
           target="_blank"
           aria-label="Check Out My Work"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 max-w-xs w-full py-3  border border-gray-200/50 text-gray-700 rounded-full font-medium border border-gray-400 shadow[8px_8px_16px_#bebebe,_-8px_-8px_16px_#ffffff] hover:scale-105 transition-all duration-300 "
+          className="flex items-center justify-center gap-3 max-w-xs w-full py-3   text-foreground rounded-full font-medium border border-gray-400 shadow[8px_8px_16px_#bebebe,_-8px_-8px_16px_#ffffff] hover:scale-105 transition-all duration-300 "
         >
-          <Briefcase size={20} />
+          <MdWork size={20} className="text-primary" />
           <span>Check Out My Work</span>
         </Link>
       </div>
