@@ -13,10 +13,52 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preload" as="image" href="/ara.jpg" />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg[#e0e5ec]`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
 export const metadata: Metadata = {
   title: "Aryan Brhan ",
   description:
     "Hi, I'm Aryan Brhan, a freelance motion and graphic designer based in Iraq. I specialize in creating engaging visual content that tells compelling stories.",
+  keywords: [
+    "Aryan Brhan",
+    "aryanbrhan",
+    "Motion Designer",
+    "Graphic Designer",
+    "Freelance Designer",
+    "Creative Portfolio",
+    "Design Portfolio",
+    "Motion Graphics",
+    "Graphic Design",
+  ],
+  referrer: "origin-when-cross-origin",
+  authors: [
+    {
+      name: "Aryan Brhan",
+      url: "https://aryanbrhan.vercel.app",
+    },
+  ],
+  creator: "Aryan Brhan",
+  publisher: "Aryan Brhan",
+  applicationName: "Aryan Brhan Portfolio",
+
   openGraph: {
     title: "Aryan Brhan | Motion & Graphic Designer",
     description:
@@ -65,6 +107,7 @@ export const metadata: Metadata = {
       "application/atom+xml": "/feed.atom",
     },
   },
+  generator: "Next.js",
 
   formatDetection: {
     telephone: false,
@@ -84,21 +127,3 @@ export const metadata: Metadata = {
     startupImage: ["/apple-icon.png"],
   },
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg[#e0e5ec]`}
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
-  );
-}

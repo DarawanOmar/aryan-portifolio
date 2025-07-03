@@ -42,14 +42,21 @@ export const portfolioData: PortfolioData = {
       duration: "2025-present",
     },
     {
-      title: "Motion Designer  & Graphic Designer At XYZ",
+      title: "Motion & Graphic Designer",
       company: "NRT TV",
       duration: "2022-2025",
     },
+
     {
-      title: "Freelance Vedio Editor ",
-      company: "NTV_Arabic",
+      title: "Video Editor & Graphic Designer",
+      company: "XYZ",
       duration: "2022-2025",
+    },
+
+    {
+      title: "Freelance video Editor ",
+      company: "NTV_Arabic",
+      duration: "2023-2024",
     },
 
     {

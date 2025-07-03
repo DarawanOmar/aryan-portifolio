@@ -44,12 +44,14 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-400 to-zinc-400 rounded-full blur-md opacity-100 animate-pulse"></div>
             <Image
-              src={data.profileImage}
+              src={data.profileImage} // is "/ara.jpg"
               alt={data.name}
-              height={600}
-              width={600}
-              quality={100}
-              className="relative h-32 w-32 object-cover object-top rounded-full border-4 border-white/20 shadow-2xl"
+              height={128}
+              width={128}
+              priority
+              quality={85}
+              sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, (max-width: 1024px) 112px, 128px"
+              className="relative h-32 w-32 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 xl:h-32 xl:w-32 object-cover object-top rounded-full border-4 border-white/20 shadow-2xl"
             />
           </div>
         </div>
@@ -69,6 +71,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={link.name}
             className="p-3 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-700 hover:bg-gray-50 hover:scale-110 transition-all duration-300 hover:shadow-lg shadow-md"
           >
             {getIcon(link.icon)}
@@ -88,6 +91,9 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
                 ? method.value
                 : "#"
             }
+            aria-label={
+              method.type.charAt(0).toUpperCase() + method.type.slice(1)
+            }
             className="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-600 text-white rounded-full font-medium hover:from-gray-900 hover:to-gray-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             {getIcon(method.icon)}
@@ -101,6 +107,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
         <Link
           href="https://instagram.com/aryan_brhan01"
           target="_blank"
+          aria-label="Check Out My Work"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-3 max-w-xs w-full py-3  border border-gray-200/50 text-gray-700 rounded-full font-medium border border-gray-400 shadow[8px_8px_16px_#bebebe,_-8px_-8px_16px_#ffffff] hover:scale-105 transition-all duration-300 "
         >
