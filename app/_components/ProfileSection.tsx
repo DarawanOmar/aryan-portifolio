@@ -6,6 +6,7 @@ import {
   Instagram,
   Linkedin,
   LucideFacebook,
+  Briefcase,
 } from "lucide-react";
 import { PortfolioData } from "../_type";
 import Image from "next/image";
@@ -36,7 +37,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
   };
 
   return (
-    <div className="text-center space-y-8">
+    <div className="text-center space-y-8 bg[#e0e5ec]">
       {/* Profile Image */}
       <div className="relative">
         <div className="flex flex-col justify-center items-center mb-6 ">
@@ -87,12 +88,25 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
                 ? method.value
                 : "#"
             }
-            className="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-600 text-white rounded-full font-medium hover:from-gray-900 hover:to-gray-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl bg-black"
+            className="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-600 text-white rounded-full font-medium hover:from-gray-900 hover:to-gray-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             {getIcon(method.icon)}
             <span>{method.label}</span>
           </Link>
         ))}
+      </div>
+
+      {/* Check Out My Work Button */}
+      <div className="flex justify-center bg[#e0e5ec]   py5">
+        <Link
+          href="https://instagram.com/aryan_brhan01"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-3 max-w-xs w-full py-3  border border-gray-200/50 text-gray-700 rounded-full font-medium border border-gray-400 shadow[8px_8px_16px_#bebebe,_-8px_-8px_16px_#ffffff] hover:scale-105 transition-all duration-300 "
+        >
+          <Briefcase size={20} />
+          <span>Check Out My Work</span>
+        </Link>
       </div>
     </div>
   );

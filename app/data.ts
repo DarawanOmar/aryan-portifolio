@@ -20,12 +20,6 @@ export const portfolioData: PortfolioData = {
       url: "https://facebook.com/aryanbrhan125",
       icon: "facebook",
     },
-
-    {
-      name: "Threads",
-      url: "https://threads.net/@aryan_brhan",
-      icon: "at-sign",
-    },
   ],
   contactMethods: [
     {
@@ -48,22 +42,18 @@ export const portfolioData: PortfolioData = {
       duration: "2025-present",
     },
     {
-      title: "Motion Designer  & Graphic Designer",
+      title: "Motion Designer  & Graphic Designer At XYZ",
       company: "NRT TV",
       duration: "2022-2025",
     },
     {
       title: "Freelance Vedio Editor ",
-      company: "NRT Arabic",
+      company: "NTV_Arabic",
       duration: "2022-2025",
     },
+
     {
-      title: "Freelance Vedio Editor ",
-      company: "NRT Arabic",
-      duration: "2022-2025",
-    },
-    {
-      title: "Motion Designer ",
+      title: "Freelance Motion Designer ",
       company: "Al Ahsan Company",
       duration: "2023-2025",
     },
