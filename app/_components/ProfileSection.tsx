@@ -39,7 +39,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
     if (method.type === "telegram") {
       window.open(`https://t.me/${method.value.replace("@", "")}`, "_blank");
     } else if (method.type === "whatsapp") {
-      window.location.href = `mailto:${method.value}`;
+      window.location.href = `${method.value}`;
     }
   };
 

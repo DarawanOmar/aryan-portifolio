@@ -19,7 +19,7 @@ function App() {
           <ProfileSection data={portfolioData} />
 
           {/* Experience Section */}
-          <ExperienceSection experience={portfolioData.experience} />
+          <ExperienceSection jobs={portfolioData.jobs} />
         </div>
       </div>
 

@@ -7,23 +7,23 @@ export const portfolioData: PortfolioData = {
   socialLinks: [
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/alexthompson",
+      url: "https://linkedin.com/in/aryan-brhan-22b81a279",
       icon: "linkedin",
     },
     {
       name: "Instagram",
-      url: "https://instagram.com/alexthompson",
+      url: "https://instagram.com/aryan_brhan01",
       icon: "instagram",
     },
     {
       name: "Facebook",
-      url: "https://facebook.com/alexthompson",
+      url: "https://facebook.com/aryanbrhan125",
       icon: "facebook",
     },
 
     {
       name: "Threads",
-      url: "https://threads.net/@alexthompson",
+      url: "https://threads.net/@aryan_brhan",
       icon: "at-sign",
     },
   ],
@@ -31,18 +31,16 @@ export const portfolioData: PortfolioData = {
     {
       type: "telegram",
       label: "Telegram",
-      value: "@alexthompson",
+      value: "@aryanbrhan",
       icon: "send",
     },
     {
       type: "whatsapp",
       label: "WhatsApp",
-      value: "alex@example.com",
+      value: "https://wa.me/9647705273939",
       icon: "message-circle",
     },
   ],
-  experience:
-    "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specialized in React, Node.js, and cloud architecture. I love creating intuitive user experiences and solving complex technical challenges.",
   jobs: [
     {
       title: "Motion Designer",
@@ -58,6 +56,16 @@ export const portfolioData: PortfolioData = {
       title: "Freelance Vedio Editor ",
       company: "NRT Arabic",
       duration: "2022-2025",
+    },
+    {
+      title: "Freelance Vedio Editor ",
+      company: "NRT Arabic",
+      duration: "2022-2025",
+    },
+    {
+      title: "Motion Designer ",
+      company: "Al Ahsan Company",
+      duration: "2023-2025",
     },
   ],
 };

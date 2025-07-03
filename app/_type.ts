@@ -23,7 +23,6 @@ export interface PortfolioData {
   profileImage: string;
   socialLinks: SocialLink[];
   contactMethods: ContactMethod[];
-  experience: string;
   jobs: {
     title: string;
     company: string;
