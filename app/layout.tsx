@@ -90,7 +90,6 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
   },
   manifest: "/manifest.json",
-  themeColor: "#ffffff",
   metadataBase: new URL("https://aryanbrhan.vercel.app"),
   robots: {
     index: true,
@@ -117,6 +116,10 @@ export const metadata: Metadata = {
   viewport: {
     width: "device-width",
     initialScale: 1,
+    height: "device-height",
+    interactiveWidget: "resizes-content",
+    minimumScale: 1,
+    viewportFit: "cover",
     maximumScale: 1,
     userScalable: false,
   },
