@@ -30,7 +30,7 @@ export const portfolioData: PortfolioData = {
     {
       type: "telegram",
       label: "Telegram",
-      value: "@aryanbrhan",
+      value: "@aryanbrhan01",
       icon: "send",
     },
     {
