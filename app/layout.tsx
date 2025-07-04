@@ -1,3 +1,4 @@
+// file: app/layout.tsx
 import type { Metadata, Viewport } from "next";
 import { Dancing_Script } from "next/font/google";
 import "./globals.css";
@@ -23,6 +24,52 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preload" as="image" href="/ara.jpg" />
+        {/* ADD THIS: Google Search Console verification meta tag */}
+        {/* Replace 'YOUR_VERIFICATION_CODE' with the actual code from Google Search Console */}
+        <meta
+          name="google-site-verification"
+          content="7jWsdk-UQYRUKlU5r7euYc2qOBkCYFr9wHVsV-Z3ti8"
+        />
+
+        {/* ADD THIS: Additional SEO meta tags */}
+        <meta name="author" content="Aryan Brhan" />
+        <meta name="copyright" content="Aryan Brhan" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Aryan Brhan",
+              jobTitle: "Motion & Graphic Designer",
+              description:
+                "Freelance motion and graphic designer based in Iraq, specializing in creating engaging visual content that tells compelling stories.",
+              url: "https://aryanbrhan.vercel.app",
+              image: "https://aryanbrhan.vercel.app/ara.jpg",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "Iraq",
+              },
+              knowsAbout: [
+                "Motion Graphics",
+                "Graphic Design",
+                "Video Editing",
+                "Visual Design",
+                "Creative Direction",
+              ],
+              alumniOf: "Motion & Graphic Design",
+              worksFor: {
+                "@type": "Organization",
+                name: "Freelance",
+              },
+            }),
+          }}
+        />
       </head>
       <body
         className={cn(
@@ -40,7 +87,7 @@ export default async function RootLayout({
   );
 }
 export const metadata: Metadata = {
-  title: "Aryan Brhan ",
+  title: "Aryan Brhan | Motion & Graphic Designer",
   description:
     "Hi, I'm Aryan Brhan, a freelance motion and graphic designer based in Iraq. I specialize in creating engaging visual content that tells compelling stories.",
   keywords: [
@@ -53,6 +100,9 @@ export const metadata: Metadata = {
     "Design Portfolio",
     "Motion Graphics",
     "Graphic Design",
+    "Iraq Designer", // ADDED: Location-based keyword
+    "Kurdish Designer", // ADDED: If applicable
+    "Middle East Designer", // ADDED: Regional keyword
   ],
   referrer: "origin-when-cross-origin",
   authors: [
@@ -104,6 +154,15 @@ export const metadata: Metadata = {
     noimageindex: false,
     nosnippet: false,
     noarchive: false,
+    googleBot: {
+      // ADDED: Specific Google bot instructions
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     canonical: "https://aryanbrhan.vercel.app",
@@ -113,7 +172,9 @@ export const metadata: Metadata = {
     },
   },
   generator: "Next.js",
-
+  // ADDED: Additional metadata for better SEO
+  category: "Design", // ADDED: Category for better classification
+  classification: "Portfolio", // ADDED: Classification
   formatDetection: {
     telephone: false,
     address: false,
