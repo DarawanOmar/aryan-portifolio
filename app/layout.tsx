@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
     shortcut: "/favicon-16x16.png",
   },
-  manifest: "/manifest.json",
+  manifest: "/manifest.ts",
   metadataBase: new URL("https://aryanbrhan.vercel.app"),
   robots: {
     index: true,
