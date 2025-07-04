@@ -135,7 +135,7 @@ export const viewport: Viewport = {
   interactiveWidget: "resizes-content",
   minimumScale: 1,
   viewportFit: "cover",
-  maximumScale: 1,
-  userScalable: true,
+  maximumScale: 5, // Changed from 1 to 5 for accessibility
+  userScalable: true, // Changed from false to true for accessibility
   colorScheme: "light dark",
 };
