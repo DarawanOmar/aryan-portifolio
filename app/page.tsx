@@ -29,11 +29,7 @@ function App() {
           {/* Experience Section */}
           <div className="max-w-max mx-auto flex gap-3">
             <p>Created by</p>
-            <Link
-              className="text-primary"
-              href={"https://darawanomar.vercel.app"}
-            >
-              {/* <Link className="text-primary" href={"https://wa.me/9647512813327"}> */}
+             <Link className="text-primary" href={"https://wa.me/9647512813327"}>
               Darawan Omar
             </Link>
           </div>
