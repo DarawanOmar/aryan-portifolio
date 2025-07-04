@@ -9,9 +9,8 @@ function App() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-background via-background/50 to-background/100 relative overflow-hidden  ">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gray-200 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gray-300 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
-        {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-500"></div> */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/50  rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/50 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       {/* Content */}
@@ -29,7 +28,7 @@ function App() {
           {/* Experience Section */}
           <div className="max-w-max mx-auto flex gap-3">
             <p>Created by</p>
-             <Link className="text-primary" href={"https://wa.me/9647512813327"}>
+            <Link className="text-primary" href={"https://wa.me/9647512813327"}>
               Darawan Omar
             </Link>
           </div>

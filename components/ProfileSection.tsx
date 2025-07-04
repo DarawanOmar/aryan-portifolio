@@ -39,7 +39,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
       <div className="relative">
         <div className="flex flex-col justify-center items-center mb-6 ">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-400 to-zinc-400 rounded-full blur-md opacity-100 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/20 to-primary rounded-full blur-sm opacity-100 animate-pulse"></div>
             <Image
               src={data.profileImage} // is "/ara.jpg"
               alt={data.name}
@@ -111,7 +111,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ data }) => {
           className="flex items-center justify-center gap-3 max-w-xs w-full py-3   text-foreground rounded-full font-medium border border-gray-400 shadow[8px_8px_16px_#bebebe,_-8px_-8px_16px_#ffffff] hover:scale-105 transition-all duration-300 "
         >
           <MdWork size={20} className="text-primary" />
-          <span>Check Out My Work</span>
+          <span className="text-primary">Check Out My Work</span>
         </Link>
       </div>
     </div>
