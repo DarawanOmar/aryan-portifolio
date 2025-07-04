@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-providers";
@@ -92,10 +92,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-    shortcut: "/favicon-16x16.png",
+    apple: "/apple-icon.png",
+    shortcut: "/apple-icon.png",
   },
-  manifest: "/manifest.ts",
+  manifest: "/manifest.webmanifest",
   metadataBase: new URL("https://aryanbrhan.vercel.app"),
   robots: {
     index: true,
@@ -119,20 +119,23 @@ export const metadata: Metadata = {
     address: false,
     email: false,
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    height: "device-height",
-    interactiveWidget: "resizes-content",
-    minimumScale: 1,
-    viewportFit: "cover",
-    maximumScale: 1,
-    userScalable: false,
-  },
   appleWebApp: {
     capable: true,
     title: "Aryan Brhan",
     statusBarStyle: "default",
     startupImage: ["/apple-icon.png"],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "black",
+  width: "device-width",
+  initialScale: 1,
+  height: "device-height",
+  interactiveWidget: "resizes-content",
+  minimumScale: 1,
+  viewportFit: "cover",
+  maximumScale: 1,
+  userScalable: true,
+  colorScheme: "light dark",
 };

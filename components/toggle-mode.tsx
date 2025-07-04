@@ -19,6 +19,8 @@ export const ThemeToggleButton = () => {
   }
   return (
     <Button
+      aria-label="Toggle theme"
+      title="Toggle theme"
       size="icon"
       className="rounded-full bg-transparent text-foreground hover:bg-transparent"
       onClick={toggleTheme}

@@ -40,6 +40,7 @@ export function ThemeSelector() {
   return (
     <div className="fixed top-6 right-6 z-50">
       <button
+        aria-label="Change theme"
         onClick={handleThemeChange}
         className="group flex items-center gap-2  backdrop-blur-sm  rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
         title={`Current theme: ${getCurrentTheme().name}`}
