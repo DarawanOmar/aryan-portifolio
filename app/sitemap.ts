@@ -12,6 +12,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: currentDate,
       changeFrequency: "monthly", // ADDED: How often the page changes
       priority: 1, // ADDED: Priority (0.0 to 1.0)
+      images: [
+        "https://aryanbrhan.vercel.app/og-image.png",
+        "https://aryanbrhan.vercel.app/ara.jpg",
+      ],
     },
     // ADD MORE PAGES: When you add more pages, add them here
     // Example:

@@ -90,6 +90,7 @@ export const metadata: Metadata = {
   title: "Aryan Brhan | Motion & Graphic Designer",
   description:
     "Hi, I'm Aryan Brhan, a freelance motion and graphic designer based in Iraq. I specialize in creating engaging visual content that tells compelling stories.",
+
   keywords: [
     "Aryan Brhan",
     "aryanbrhan",
@@ -104,6 +105,7 @@ export const metadata: Metadata = {
     "Kurdish Designer", // ADDED: If applicable
     "Middle East Designer", // ADDED: Regional keyword
   ],
+
   referrer: "origin-when-cross-origin",
   authors: [
     {
@@ -127,6 +129,12 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Aryan Brhan - Motion & Graphic Designer",
+      },
+      {
+        url: "https://aryanbrhan.vercel.app/ara.jpg", // Fallback image
+        width: 960,
+        height: 960,
+        alt: "Aryan Brhan Profile Picture",
       },
     ],
     locale: "en_US",
@@ -160,7 +168,7 @@ export const metadata: Metadata = {
       follow: true,
       noimageindex: false,
       "max-video-preview": -1,
-      "max-image-preview": "large",
+      "max-image-preview": "standard",
       "max-snippet": -1,
     },
   },
