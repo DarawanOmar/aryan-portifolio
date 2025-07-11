@@ -1,5 +1,6 @@
 // file: app/layout.tsx
 import type { Metadata, Viewport } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-providers";
@@ -23,9 +24,7 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="preload" as="image" href="/ara.jpg" />
-        {/* ADD THIS: Google Search Console verification meta tag */}
-        {/* Replace 'YOUR_VERIFICATION_CODE' with the actual code from Google Search Console */}
+        <link rel="preload" as="image" href="/ara.webp" />
         <meta
           name="google-site-verification"
           content="7jWsdk-UQYRUKlU5r7euYc2qOBkCYFr9wHVsV-Z3ti8"
@@ -50,7 +49,7 @@ export default async function RootLayout({
               description:
                 "Freelance motion and graphic designer based in Iraq, specializing in creating engaging visual content that tells compelling stories.",
               url: "https://aryanbrhan.vercel.app",
-              image: "https://aryanbrhan.vercel.app/ara.jpg",
+              image: "https://aryanbrhan.vercel.app/ara.webp",
               address: {
                 "@type": "PostalAddress",
                 addressCountry: "Iraq",
@@ -80,6 +79,7 @@ export default async function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ActiveThemeProvider initialTheme={activeThemeValue}>
             {children}
+            <SpeedInsights />
           </ActiveThemeProvider>
         </ThemeProvider>
       </body>
@@ -131,7 +131,7 @@ export const metadata: Metadata = {
         alt: "Aryan Brhan - Motion & Graphic Designer",
       },
       {
-        url: "https://aryanbrhan.vercel.app/ara.jpg", // Fallback image
+        url: "https://aryanbrhan.vercel.app/ara.webp", // Fallback image
         width: 960,
         height: 960,
         alt: "Aryan Brhan Profile Picture",

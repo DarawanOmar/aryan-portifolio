@@ -17,25 +17,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         "https://aryanbrhan.vercel.app/ara.jpg",
       ],
     },
-    // ADD MORE PAGES: When you add more pages, add them here
-    // Example:
-    // {
-    //   url: `${baseUrl}/about`,
-    //   lastModified: currentDate,
-    //   changeFrequency: "monthly",
-    //   priority: 0.8,
-    // },
-    // {
-    //   url: `${baseUrl}/portfolio`,
-    //   lastModified: currentDate,
-    //   changeFrequency: "weekly",
-    //   priority: 0.9,
-    // },
-    // {
-    //   url: `${baseUrl}/contact`,
-    //   lastModified: currentDate,
-    //   changeFrequency: "yearly",
-    //   priority: 0.7,
-    // },
   ];
 }
