@@ -1,8 +1,7 @@
-// file: app/layout.tsx
+import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Dancing_Script } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-providers";
 import { cn } from "@/lib/utils";
 import { cookies } from "next/headers";
@@ -27,16 +26,8 @@ export default async function RootLayout({
         <link rel="preload" as="image" href="/ara.webp" />
         <meta
           name="google-site-verification"
-          content="7jWsdk-UQYRUKlU5r7euYc2qOBkCYFr9wHVsV-Z3ti8"
+          content={process.env.GOOGLE_SITE_VERIFICATION!}
         />
-
-        {/* ADD THIS: Additional SEO meta tags */}
-        <meta name="author" content="Aryan Brhan" />
-        <meta name="copyright" content="Aryan Brhan" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="distribution" content="global" />
-        <meta name="rating" content="general" />
 
         <script
           type="application/ld+json"
@@ -86,11 +77,11 @@ export default async function RootLayout({
     </html>
   );
 }
+
 export const metadata: Metadata = {
   title: "Aryan Brhan | Motion & Graphic Designer",
   description:
     "Hi, I'm Aryan Brhan, a freelance motion and graphic designer based in Iraq. I specialize in creating engaging visual content that tells compelling stories.",
-
   keywords: [
     "Aryan Brhan",
     "aryanbrhan",
@@ -101,9 +92,9 @@ export const metadata: Metadata = {
     "Design Portfolio",
     "Motion Graphics",
     "Graphic Design",
-    "Iraq Designer", // ADDED: Location-based keyword
-    "Kurdish Designer", // ADDED: If applicable
-    "Middle East Designer", // ADDED: Regional keyword
+    "Iraq Designer",
+    "Kurdish Designer",
+    "Middle East Designer",
   ],
 
   referrer: "origin-when-cross-origin",
@@ -131,7 +122,7 @@ export const metadata: Metadata = {
         alt: "Aryan Brhan - Motion & Graphic Designer",
       },
       {
-        url: "https://aryanbrhan.vercel.app/ara.webp", // Fallback image
+        url: "https://aryanbrhan.vercel.app/ara.webp",
         width: 960,
         height: 960,
         alt: "Aryan Brhan Profile Picture",
@@ -163,7 +154,6 @@ export const metadata: Metadata = {
     nosnippet: false,
     noarchive: false,
     googleBot: {
-      // ADDED: Specific Google bot instructions
       index: true,
       follow: true,
       noimageindex: false,
@@ -180,9 +170,8 @@ export const metadata: Metadata = {
     },
   },
   generator: "Next.js",
-  // ADDED: Additional metadata for better SEO
-  category: "Design", // ADDED: Category for better classification
-  classification: "Portfolio", // ADDED: Classification
+  category: "Design",
+  classification: "Portfolio",
   formatDetection: {
     telephone: false,
     address: false,
@@ -204,7 +193,7 @@ export const viewport: Viewport = {
   interactiveWidget: "resizes-content",
   minimumScale: 1,
   viewportFit: "cover",
-  maximumScale: 5, // Changed from 1 to 5 for accessibility
-  userScalable: true, // Changed from false to true for accessibility
+  maximumScale: 5,
+  userScalable: true,
   colorScheme: "light dark",
 };
