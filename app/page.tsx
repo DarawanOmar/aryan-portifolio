@@ -1,9 +1,10 @@
 import ExperienceSection from "@/components/ExpeerinceSection";
 import ProfileSection from "@/components/ProfileSection";
 import { portfolioData } from "./data";
-import { ThemeToggleButton } from "@/components/toggle-mode";
+// import { ThemeToggleButton } from "@/components/toggle-mode";
 import { ThemeSelector } from "@/components/theme/theme-selector";
 import Link from "next/link";
+import ThemeToggleButton from "@/components/ui/theme-toggle-button";
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
       <div className="z-10 py-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-4xl mx-auto space-y-16 ">
           <div className="fixed top-6 left-6 ">
-            <ThemeToggleButton />
+            {/* <ThemeToggleButton /> */}
+            <ThemeToggleButton
+              variant="gif"
+              url="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3JwcXdzcHd5MW92NWprZXVpcTBtNXM5cG9obWh0N3I4NzFpaDE3byZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/WgsVx6C4N8tjy/giphy.gif"
+            />
           </div>{" "}
           <div className=" fixed top-6 right-6 ">
             <ThemeSelector />
