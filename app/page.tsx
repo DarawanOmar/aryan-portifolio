@@ -19,10 +19,7 @@ function App() {
         <div className="max-w-4xl mx-auto space-y-16 ">
           <div className="fixed top-6 left-6 ">
             {/* <ThemeToggleButton /> */}
-            <ThemeToggleButton
-              variant="gif"
-              url="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3JwcXdzcHd5MW92NWprZXVpcTBtNXM5cG9obWh0N3I4NzFpaDE3byZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/WgsVx6C4N8tjy/giphy.gif"
-            />
+            <ThemeToggleButton variant="circle-blur" start="bottom-right" />
           </div>{" "}
           <div className=" fixed top-6 right-6 ">
             <ThemeSelector />
